@@ -33,3 +33,10 @@ Attention runs 8 times in parallel, each head looking for different relationship
 
 ## Why did this paper matter?
 It introduced one architecture that works for every language task and outperformed everything before it. Every major AI system today- GPT, Claude, Gemini, BERT- is built on this.
+
+## What is positional encoding and how it works?
+* The transformer reads all words at once so it has no sense of word order. 
+* Positional encoding solves this by stamping each word with its position. 
+* for example: word 1 gets stamp 1, word 2 gets stamp 2 and so on.
+* Sine and cosine waves are used to create these stamps because they produce a unique number pair at every position. No two positionas gets the same pair.
+* This stamp is added to the word's meaning vector before attention runs. So bythe time attentions starts, every word already know its plae in the sentence.
